@@ -19,9 +19,50 @@ To implement a DC Motor Direction Control Using 8051.
 9.Simulate the circuit in Proteus software.
 
 ## Program :
+~~~
+ORG 0000H       ; Start of program
+
+START:
+    ; Motor Forward (P1.0 = 1, P1.1 = 0)
+    SETB P1.0
+    CLR  P1.1
+    ACALL DELAY
+
+    ; Motor Stop (Both LOW)
+    CLR  P1.0
+    CLR  P1.1
+    ACALL DELAY
+
+    ; Motor Reverse (P1.0 = 0, P1.1 = 1)
+    CLR  P1.0
+    SETB P1.1
+    ACALL DELAY
+
+    ; Motor Stop
+    CLR  P1.0
+    CLR  P1.1
+    ACALL DELAY
+
+    SJMP START   ; Repeat the sequence
+
+;----------------------------
+; Delay Subroutine (~visible delay)
+;----------------------------
+DELAY:
+    MOV R2, #20
+D1: MOV R1, #255
+D2: MOV R0, #255
+D3: DJNZ R0, D3
+    DJNZ R1, D2
+    DJNZ R2, D1
+    RET
+
+END
+~~~
 
 ## Output :
-
+<img width="1919" height="1141" alt="image" src="https://github.com/user-attachments/assets/ed7c770d-2f67-4abb-9af8-c4c928a2c9fa" />
+<img width="1919" height="1139" alt="image" src="https://github.com/user-attachments/assets/a641b8dc-55c1-4132-9153-396f43d5313c" />
 ## Result:
 The DC Motor direction control using 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
 
