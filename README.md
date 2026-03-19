@@ -64,5 +64,5 @@ END
 <img width="1919" height="1141" alt="image" src="https://github.com/user-attachments/assets/ed7c770d-2f67-4abb-9af8-c4c928a2c9fa" />
 <img width="1919" height="1139" alt="image" src="https://github.com/user-attachments/assets/a641b8dc-55c1-4132-9153-396f43d5313c" />
 ## Result:
-    The DC Motor direction control using 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.direction control using 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
+The DC Motor direction control using 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
 
